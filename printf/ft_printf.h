@@ -6,7 +6,7 @@
 /*   By: tomandra <tomandra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 15:52:26 by tomandra          #+#    #+#             */
-/*   Updated: 2025/05/13 19:54:23 by tomandra         ###   ########.fr       */
+/*   Updated: 2025/05/15 20:06:51 by tomandra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,11 @@
 # include <unistd.h>
 
 int		ft_printf(const char *, ...);
-void	ft_putchar(char c);
+int		ft_putchar(char c);
+int		ft_putstr(char *s);
 int		ft_strlen(const char *s);
-void	ft_putnbr(int nb);
+void	ft_putnbr(int nb, int *count);
+void	ft_uputnbr(unsigned int nb, int *count);
+void	ft_hex_putnbr(unsigned int nb, char *hex, int *count);
 
 #endif
