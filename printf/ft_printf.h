@@ -24,6 +24,7 @@ int		ft_putstr(char *s);
 int		ft_strlen(const char *s);
 void	ft_putnbr(int nb, int *count);
 void	ft_uputnbr(unsigned int nb, int *count);
+void	ft_putptr(void *ptr, int *count);
 void	ft_hex_putnbr(unsigned int nb, char *hex, int *count);
 
 #endif
