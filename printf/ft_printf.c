@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tomandra <tomandra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/09 16:28:23 by tomandra          #+#    #+#             */
-/*   Updated: 2025/05/15 19:56:03 by tomandra         ###   ########.fr       */
+/*   Created: 2025/05/18 15:49:20 by tomandra          #+#    #+#             */
+/*   Updated: 2025/05/18 15:49:20 by tomandra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,31 +40,25 @@ int	ft_printf(const char *str, ...)
 {
 	va_list	args;
 	int		i;
-	int	count;
+	int		count;
 
 	i = 0;
 	count = 0;
 	va_start(args, str);
 	if (!str)
-		return (0);
+		return (-1);
 	while (str[i])
 	{
-    	if (str[i] == '%' && str[i + 1])
-    	{
-        	count += ft_parse_format(str[i + 1], args);
-        	i += 2;
-    	}
+		if (str[i] == '%' && str[i + 1])
+		{
+			count += ft_parse_format(str[i + 1], args);
+			i += 2;
+		}
 		else
-    	{
-        	count += write(1, &str[i], 1);
-        	i++;
-    	}
-}
+			count += ft_putchar(str[i++]);
+	}
 	va_end(args);
+	if (count < 0)
+		return (-1);
 	return (count);
-}
-
-int	main(void)
-{
-	printf("\n%d", ft_printf("ola %djij"));
 }
