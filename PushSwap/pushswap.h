@@ -35,5 +35,9 @@ void	ft_parsing(char **argv);
 void	ft_fill_stack(char **str, t_stack **stack);
 void	ft_index_stack(t_stack *stack_a, int size);
 int		ft_in_range(char **argv);
+void	sa(t_stack **a);
+void	pa(t_stack **a, t_stack **b);
+void	pb(t_stack **a, t_stack **b);
+void	ra(t_stack **a);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: tomandra <tomandra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/30 17:50:37 by tomandra          #+#    #+#              #
-#    Updated: 2025/09/30 19:14:29 by tomandra         ###   ########.fr        #
+#    Updated: 2025/10/12 20:16:42 by tomandra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Werror -Wextra -g
 SRC = parsing_args.c parsing_stack.c parsing_string.c parsing_utils.c \
-		utils.c stack_utils.c main.c
+		utils.c stack_utils.c swap.c push.c rotate.c main.c
 OBJS = $(SRC:.c=.o)
 IMPLIBFT = ImprovedLibft/improvedlibft.a
 
