@@ -6,7 +6,7 @@
 /*   By: tomandra <tomandra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 17:26:45 by tomandra          #+#    #+#             */
-/*   Updated: 2025/10/11 17:27:12 by tomandra         ###   ########.fr       */
+/*   Updated: 2025/10/23 15:28:36 by tomandra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,12 @@ void	ft_stack_add_front(t_stack **stack, t_stack *new)
 	*stack = new;
 }
 
-int	ft_stacksize(t_stack *lst)
+int	ft_stacksize(t_stack *stack)
 {
 	t_stack	*temp;
 	int		i;
 
-	temp = lst;
+	temp = stack;
 	i = 0;
 	while (temp)
 	{

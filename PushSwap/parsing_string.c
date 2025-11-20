@@ -19,7 +19,7 @@ static void	ft_err_strjoin(char **temp, char *str)
 	new_str = ft_strjoin(*temp, str);
 	if (!new_str)
 	{
-		ft_putstr_fd("Error!\n", 2);
+		ft_putstr_fd("Error\n", 2);
 		exit(1);
 	}
 	free(*temp);
@@ -35,14 +35,14 @@ static char	*ft_join_string(char **argv)
 	temp = ft_strdup("");
 	if (!temp)
 	{
-		ft_putstr_fd("Error!\n", 2);
+		ft_putstr_fd("Error\n", 2);
 		exit(1);
 	}
 	while (argv[i])
 	{
 		if (ft_ifspaces(argv[i]))
 		{
-			ft_putstr_fd("Error!\n", 2);
+			ft_putstr_fd("Error\n", 2);
 			free(temp);
 			exit(1);
 		}

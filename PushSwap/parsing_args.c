@@ -6,7 +6,7 @@
 /*   By: tomandra <tomandra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 16:49:14 by tsilv             #+#    #+#             */
-/*   Updated: 2025/10/11 17:20:54 by tomandra         ###   ########.fr       */
+/*   Updated: 2025/10/26 15:13:32 by tomandra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	ft_parsing(char **argv)
 	if (!ft_valid_args(argv) || !ft_in_range(argv) || !ft_is_dup(argv))
 	{
 		free_arr(argv);
-		ft_putstr_fd("Error!\n", 2);
+		ft_putstr_fd("Error\n", 2);
 		exit(1);
 	}
 }

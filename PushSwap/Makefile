@@ -6,38 +6,38 @@
 #    By: tomandra <tomandra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/30 17:50:37 by tomandra          #+#    #+#              #
-#    Updated: 2025/10/12 20:16:42 by tomandra         ###   ########.fr        #
+#    Updated: 2025/11/13 11:55:52 by tomandra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Werror -Wextra -g
-SRC = parsing_args.c parsing_stack.c parsing_string.c parsing_utils.c \
-		utils.c stack_utils.c swap.c push.c rotate.c main.c
+SRC = parsing_args.c index_stack.c parsing_string.c utils.c \
+		stack_utils.c operations.c sort.c push_swap.c
 OBJS = $(SRC:.c=.o)
-IMPLIBFT = ImprovedLibft/improvedlibft.a
+LIBFT = Libft/libft.a
 
 all: $(NAME)
 
-$(NAME): $(SRC) $(OBJS) $(IMPLIBFT)
-	@$(CC) $(CFLAGS) $(OBJS) $(IMPLIBFT) -o $@
+$(NAME): $(SRC) $(OBJS) $(LIBFT)
+	@$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $@
 	
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $(SRC)
 	@echo "Compiled all files"
 
-$(IMPLIBFT):
-	@make -C ./ImprovedLibft -s
+$(LIBFT):
+	@make -C ./Libft -s
 
 clean:
 	@rm -f $(OBJS)
-	@make clean -C ./ImprovedLibft -s
+	@make clean -C ./Libft -s
 	@echo "Cleaned all objects"
 	
 fclean: clean
 	@rm -f $(NAME)
-	@rm -f $(IMPLIBFT)
+	@rm -f $(LIBFT)
 	@echo "Cleaned library"
 	
 re: fclean all
